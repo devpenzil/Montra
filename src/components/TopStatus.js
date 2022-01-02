@@ -1,5 +1,5 @@
 import React from 'react';
-import {StatusBar, StyleSheet, Text, View} from 'react-native';
+import {StatusBar, StyleSheet, View} from 'react-native';
 
 const TopStatus = ({fullscreen}) => {
   return (
@@ -13,5 +13,3 @@ const TopStatus = ({fullscreen}) => {
 };
 
 export default TopStatus;
-
-const styles = StyleSheet.create({});
