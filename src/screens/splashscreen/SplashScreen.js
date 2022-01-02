@@ -1,5 +1,5 @@
 import React from 'react';
-import {StyleSheet, Text, View} from 'react-native';
+import {Image, StyleSheet, View} from 'react-native';
 import TopStatus from '../../components/topsstatus/TopStatus';
 
 const SplashScreen = () => {
@@ -7,7 +7,7 @@ const SplashScreen = () => {
     <>
       <TopStatus fullscreen={true} />
       <View style={styles.container}>
-        <Text>hello</Text>
+        <Image source={require('../../../assets/splashlogo.png')} />
       </View>
     </>
   );
