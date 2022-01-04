@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, TouchableOpacity} from 'react-native';
 import tailwind from 'tailwind-rn';
 import BackBar from '../../components/BackBar';
 import CommonButton from '../../components/CommonButton';
@@ -21,6 +21,23 @@ const LoginScreen = () => {
             textcolor={'text-white'}
           />
         </View>
+        <TouchableOpacity>
+          <Text
+            style={tailwind(
+              'text-center text-xl font-bold text-base text-purple-600 mt-3 ',
+            )}>
+            Forgot Password ?
+          </Text>
+        </TouchableOpacity>
+        <Text style={tailwind('text-center mt-4 text-black')}>
+          Don’t have an account yet?{' '}
+          <Text
+            style={tailwind(
+              'text-center mt-2 text-black underline text-purple-600 font-bold',
+            )}>
+            Sign Up
+          </Text>
+        </Text>
       </View>
     </>
   );
