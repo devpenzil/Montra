@@ -1,9 +1,16 @@
-import React from 'react';
-import {Image, StyleSheet, View} from 'react-native';
+import React, {useEffect} from 'react';
+import {Image, View} from 'react-native';
+import {useNavigation} from '@react-navigation/native';
 import tailwind from 'tailwind-rn';
 import TopStatus from '../../components/TopStatus';
 
 const SplashScreen = () => {
+  const navigation = useNavigation();
+  useEffect(() => {
+    setTimeout(() => {
+      navigation.navigate('onboard');
+    }, 1500);
+  }, [navigation]);
   return (
     <>
       <TopStatus fullscreen={true} />

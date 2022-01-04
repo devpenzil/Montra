@@ -1,15 +1,17 @@
 import React from 'react';
 import {View, Text} from 'react-native';
 import tailwind from 'tailwind-rn';
+import {useNavigation} from '@react-navigation/native';
 import CommonButton from '../../components/CommonButton';
 import OnBoardItems from '../../components/OnBoardItems';
 import TopStatus from '../../components/TopStatus';
 const Onboarding = () => {
+  const navigation = useNavigation();
   const login = () => {
-    alert('login');
+    navigation.navigate('login');
   };
   const signup = () => {
-    alert('sign up');
+    navigation.navigate('signup');
   };
   return (
     <>
