@@ -8,6 +8,8 @@ import SignupuScreen from './src/screens/signupscreen/SignupuScreen';
 import Homepage from './src/screens/home/Homepage';
 import Toast from 'react-native-toast-message';
 import auth from '@react-native-firebase/auth';
+import AddExpense from './src/screens/addexpense/AddExpense';
+import AddIncome from './src/screens/addincome/AddIncome';
 const Stack = createNativeStackNavigator();
 const App = () => {
   const [initail, setInitail] = useState(
@@ -25,6 +27,8 @@ const App = () => {
           <Stack.Screen name="login" component={LoginScreen} />
           <Stack.Screen name="signup" component={SignupuScreen} />
           <Stack.Screen name="home" component={Homepage} />
+          <Stack.Screen name="addexpense" component={AddExpense} />
+          <Stack.Screen name="addincome" component={AddIncome} />
         </Stack.Navigator>
       </NavigationContainer>
       <Toast />
