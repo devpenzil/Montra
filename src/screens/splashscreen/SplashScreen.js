@@ -3,12 +3,15 @@ import {Image, View} from 'react-native';
 import {useNavigation} from '@react-navigation/native';
 import tailwind from 'tailwind-rn';
 import TopStatus from '../../components/TopStatus';
+import auth from '@react-native-firebase/auth';
 
 const SplashScreen = () => {
   const navigation = useNavigation();
   useEffect(() => {
     setTimeout(() => {
-      navigation.navigate('onboard');
+      auth().currentUser !== null
+        ? navigation.navigate('home')
+        : navigation.navigate('onboard');
     }, 1500);
   }, [navigation]);
   return (

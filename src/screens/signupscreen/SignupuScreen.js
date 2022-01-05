@@ -7,8 +7,11 @@ import CommonButton from '../../components/CommonButton';
 import CommonInput from '../../components/CommonInput';
 import TopStatus from '../../components/TopStatus';
 import auth from '@react-native-firebase/auth';
-import Toast from 'react-native-toast-message';
+import {useNavigation} from '@react-navigation/native';
+// import {reference} from '../../firebase/Firebase';
+import database from '@react-native-firebase/database';
 const SignupuScreen = () => {
+  const navigation = useNavigation();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [uname, setUname] = useState('');
@@ -21,7 +24,22 @@ const SignupuScreen = () => {
         auth().currentUser.updateProfile({
           displayName: uname,
         });
+        console.log(auth().currentUser.uid);
+        // setting database
+        database()
+          .ref(`/users/${auth().currentUser.uid}`)
+          .set({
+            displayName: uname,
+          })
+          .then(Res => {
+            console.log(Res);
+          })
+          .catch(Error => {
+            console.log(Error);
+          });
+        // close
         ToastAndroid.show('User Created', ToastAndroid.SHORT);
+        navigation.navigate('home');
         setLoading(false);
       })
       .catch(Error => {
