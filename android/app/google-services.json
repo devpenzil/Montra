@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "517204005210",
+    "project_id": "montra-baf50",
+    "storage_bucket": "montra-baf50.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:517204005210:android:5490df1a592c9a52992363",
+        "android_client_info": {
+          "package_name": "com.montra"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "517204005210-apmsupa1r8cdfl2ql6ptgg42gbrutl4p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBxkpozQ98tkoiK5Snsr_xqQ0P1Ihk4wkQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "517204005210-apmsupa1r8cdfl2ql6ptgg42gbrutl4p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -10,6 +10,8 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-firebase/app": "^14.2.1",
+    "@react-native-firebase/auth": "^14.2.1",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
     "react": "17.0.2",
@@ -17,6 +19,7 @@
     "react-native-bouncy-checkbox": "^2.1.9",
     "react-native-safe-area-context": "^3.3.2",
     "react-native-screens": "^3.10.1",
+    "react-native-toast-message": "^2.1.1",
     "tailwind-rn": "^3.0.1"
   },
   "devDependencies": {

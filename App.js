@@ -5,6 +5,7 @@ import {NavigationContainer} from '@react-navigation/native';
 import LoginScreen from './src/screens/loginscreen/LoginScreen';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import SignupuScreen from './src/screens/signupscreen/SignupuScreen';
+import Toast from 'react-native-toast-message';
 const Stack = createNativeStackNavigator();
 const App = () => {
   return (
@@ -19,6 +20,7 @@ const App = () => {
           <Stack.Screen name="signup" component={SignupuScreen} />
         </Stack.Navigator>
       </NavigationContainer>
+      <Toast />
     </>
   );
 };
