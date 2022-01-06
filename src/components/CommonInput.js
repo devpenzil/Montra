@@ -2,7 +2,7 @@ import React from 'react';
 import {View, TextInput} from 'react-native';
 import tailwind from 'tailwind-rn';
 
-const CommonInput = ({placeholder, password, triggerchange}) => {
+const CommonInput = ({placeholder, password, triggerchange, numberinput}) => {
   return (
     <View>
       <TextInput
@@ -14,6 +14,7 @@ const CommonInput = ({placeholder, password, triggerchange}) => {
         onChangeText={e => {
           triggerchange(e);
         }}
+        keyboardType={numberinput ? 'numeric' : 'default'}
       />
     </View>
   );
